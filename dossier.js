@@ -23,6 +23,7 @@ const cola = fbBatchBuilder([
   'musicfarmcola',
   'NBTavern',
   'billsmusicshop',
+  'TinRoofColumbia',
 ]);
 
 const dossier = {
