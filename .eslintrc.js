@@ -22,11 +22,12 @@ module.exports = {
     'no-underscore-dangle': 0,
     // allow console logs
     'no-console': 0,
-    "arrow-body-style": ["error", "as-needed"],
+    'arrow-body-style': ['error', 'as-needed'],
     'no-plusplus': [
       "error", {
         "allowForLoopAfterthoughts": true
       }
-    ]
+    ],
+    'import/newline-after-import': 0,
   }
 }

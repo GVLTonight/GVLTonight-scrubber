@@ -1,30 +1,52 @@
-const getSmileys = require('./lib/smileys_events');
-const _fbEvents = require('./lib/fb_events.js');
+// GVL SPECIFIC
 const _smileysEvents = require('./lib/smileys_events.js');
 const _radioroomEvents = require('./lib/radioroom_events.js');
+const _fbEvents = require('./lib/fb_events.js');
+const _smileysData = () => _smileysEvents.getSmileysData();
+const _radioroomData = () => _radioroomEvents();
 
-function _smileysData() { return _smileysEvents.getSmileysData(); }
-function _facebookData() { return _fbEvents(); }
-function _radioroomData() { return _radioroomEvents(); }
+// GLOBAL FACEBOOK BUILDER
+const fbBatchBuilder = require('./utils/fbBatchBuilder');
+const _facebookData = (batchArray) => _fbEvents(batchArray);
 
-module.exports = {
+const gvl = fbBatchBuilder([
+  'GottRocksgvl',
+  'thevelofellowgvl',
+  'groundzeroSC',
+  'iongreenville',
+  'villivemusic',
+  'gmapunx',
+]);
+
+const cola = fbBatchBuilder([
+  'mainstreetpublichouse',
+  'musicfarmcola',
+  'NBTavern',
+  'billsmusicshop',
+]);
+
+const dossier = {
   gvltonight: {
+    collection: 'eventstore',
     title: 'gvltonight',
     url: 'gvltonight.com',
     api: 'api.gvltonight.com',
-    data: [_facebookData(), _smileysData(), _radioroomData()],
-    request: {
-      smileys: {
-        url: 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23FFFFFF&src=smileysacousticcafe@gmail.com&color=%230D7813&ctz=America/New_York',
-        key: () => getSmileys.getgetSmileysKey(),
-        data: () => getSmileys.getSmileysData(),
-      },
-    },
+    data: [
+      _facebookData(gvl),
+      _smileysData(),
+      _radioroomData(),
+    ],
   },
 
   colatonight: {
+    collection: 'colatonight',
     title: 'colatonight',
     url: 'colatonight.com',
     api: 'api.colatonight.com',
+    data: [
+      _facebookData(cola),
+    ],
   },
 };
+
+module.exports = dossier;
