@@ -26,6 +26,14 @@ const cola = fbBatchBuilder([
   'TinRoofColumbia',
 ]);
 
+const avl = fbBatchBuilder([
+  'AVLMusicHall',
+  'TheOrangePeelAsheville',
+  'greyeagleasheville',
+  'AshevilleCivicCenter',
+  // 'isisasheville',
+]);
+
 const dossier = {
   gvltonight: {
     collection: 'eventstore',
@@ -46,6 +54,16 @@ const dossier = {
     api: 'api.colatonight.com',
     data: [
       _facebookData(cola),
+    ],
+  },
+
+  avltonight: {
+    collection: 'avltonight',
+    title: 'avltonight',
+    url: 'avltonight.com',
+    api: 'api.avltonight.com',
+    data: [
+      _facebookData(avl),
     ],
   },
 };
