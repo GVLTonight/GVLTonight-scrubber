@@ -19,6 +19,8 @@ const gvl = fbBatchBuilder([
 ]);
 
 const cola = fbBatchBuilder([
+  'infiniteroom',
+  'columbiamuseum',
   'mainstreetpublichouse',
   'musicfarmcola',
   'NBTavern',
