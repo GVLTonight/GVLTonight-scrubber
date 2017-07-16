@@ -9,7 +9,7 @@
 ## configuration
 See [GVLTonight-scrubber/dossier.js](https://github.com/GVLTonight/GVLTonight-scrubber/blob/master/dossier.js)
 
-The only easily configurable system at this time is the facebook events scraper. The facebook system uses the page name of a venue, which can be found in the URL. (example: "https://www.facebook.com/`wpbrradioroom`/events/")
+The only easily configurable system at this time is the facebook events scraper. The facebook system uses the page name of a venue, which can be found in the URL. (example: "https://www.facebook.com/wpbrradioroom/events/")
 
 ``` javascript
 const gvl  = fbBatchBuilder(["facebook page names"])
