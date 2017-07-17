@@ -7,7 +7,7 @@ const _radioroomData = () => _radioroomEvents();
 
 // GLOBAL FACEBOOK BUILDER
 const fbBatch = require('./utils/fbBatchBuilder');
-const _facebookData = (batchArray) => _fbEvents(batchArray);
+const _facebookData = (batchArray, market) => _fbEvents(batchArray, market);
 
 const gvl = fbBatch([
   'GottRocksgvl',
@@ -33,6 +33,10 @@ const avl = fbBatch([
   'TheOrangePeelAsheville',
   'greyeagleasheville',
   'AshevilleCivicCenter',
+  'HighlandBrewingCompany',
+  'bhramaribrewhouse',
+  'NewMtnAVL',
+  'OneStopAsheville',
   // 'isisasheville',
 ]);
 
@@ -43,7 +47,7 @@ const dossier = {
     url: 'gvltonight.com',
     api: 'api.gvltonight.com',
     data: [
-      _facebookData(gvl),
+      _facebookData(gvl, 'GVL'),
       _smileysData(),
       _radioroomData(),
     ],
@@ -55,7 +59,7 @@ const dossier = {
     url: 'colatonight.com',
     api: 'api.colatonight.com',
     data: [
-      _facebookData(cola),
+      _facebookData(cola, 'COLA'),
     ],
   },
 
@@ -65,7 +69,7 @@ const dossier = {
     url: 'avltonight.com',
     api: 'api.avltonight.com',
     data: [
-      _facebookData(avl),
+      _facebookData(avl, 'AVL'),
     ],
   },
 };

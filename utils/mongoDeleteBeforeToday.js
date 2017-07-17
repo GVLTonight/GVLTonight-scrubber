@@ -16,11 +16,11 @@ module.exports = (dbName) => {
           },
         });
 
-        resolve(db.collection(dbName).count().then(x => clog(`LOG:\tTotal number of events in eventstore ${x}`)));
+        resolve(db.collection(dbName).count().then(x => clog(`LOG:\tTotal number of events in ${dbName} ${x}`)));
 
         db.close(error => {
           if (error) throw error;
-          clog('LOG:\tConnection to ALLEVENTS mlab closed');
+          clog(`LOG:\tDelete connection to ${dbName} mlab closed`);
         });
       });
     });
