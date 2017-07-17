@@ -1,4 +1,5 @@
 ## requires keys file to be present in project root folder
+See [GVLTonight](https://github.com/GVLTonight/GVLTonight)
 ``` json
 {
     "mlab": "mlab_URI",
@@ -7,7 +8,6 @@
 ```
 
 ## configuration
-See [GVLTonight](https://github.com/GVLTonight/GVLTonight)
 See [GVLTonight-scrubber/dossier.js](https://github.com/GVLTonight/GVLTonight-scrubber/blob/master/dossier.js)
 
 The only easily configurable system at this time is the facebook events scraper. The facebook system uses the page name of a venue, which can be found in the URL.
