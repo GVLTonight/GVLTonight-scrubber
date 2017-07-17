@@ -1,6 +1,3 @@
-## scrubber and db builder for gvltonight
-See [GVLTonight](https://github.com/GVLTonight/GVLTonight)
-
 ## requires keys file to be present in project root folder
 ``` json
 {
@@ -10,6 +7,7 @@ See [GVLTonight](https://github.com/GVLTonight/GVLTonight)
 ```
 
 ## configuration
+See [GVLTonight](https://github.com/GVLTonight/GVLTonight)
 See [GVLTonight-scrubber/dossier.js](https://github.com/GVLTonight/GVLTonight-scrubber/blob/master/dossier.js)
 
 The only easily configurable system at this time is the facebook events scraper. The facebook system uses the page name of a venue, which can be found in the URL.
