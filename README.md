@@ -1,3 +1,6 @@
+## scrubber and db builder for gvltonight
+See [GVLTonight](https://github.com/GVLTonight/GVLTonight)
+
 ## requires keys file to be present in project root folder
 ``` json
 {
@@ -11,12 +14,12 @@ See [GVLTonight-scrubber/dossier.js](https://github.com/GVLTonight/GVLTonight-sc
 
 The only easily configurable system at this time is the facebook events scraper. The facebook system uses the page name of a venue, which can be found in the URL.
 
-(example: "facebook.com/wpbrradioroom/events")
+(example: "facebook.com/wpbrradioroom/events/")
 
 ``` javascript
-const gvl  = fbBatchBuilder(["facebook page names"])
-const cola = fbBatchBuilder(["facebook page names"])
-const avl  = fbBatchBuilder(["facebook page names"])
+const gvl  = fbBatch( ["page names"] );
+const cola = fbBatch( ["page names"] );
+const avl  = fbBatch( ["page names"] );
 ```
 
 ## scripts

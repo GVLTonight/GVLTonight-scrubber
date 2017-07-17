@@ -6,10 +6,10 @@ const _smileysData = () => _smileysEvents.getSmileysData();
 const _radioroomData = () => _radioroomEvents();
 
 // GLOBAL FACEBOOK BUILDER
-const fbBatchBuilder = require('./utils/fbBatchBuilder');
+const fbBatch = require('./utils/fbBatchBuilder');
 const _facebookData = (batchArray) => _fbEvents(batchArray);
 
-const gvl = fbBatchBuilder([
+const gvl = fbBatch([
   'GottRocksgvl',
   'thevelofellowgvl',
   'groundzeroSC',
@@ -18,7 +18,7 @@ const gvl = fbBatchBuilder([
   'gmapunx',
 ]);
 
-const cola = fbBatchBuilder([
+const cola = fbBatch([
   'infiniteroom',
   'columbiamuseum',
   'mainstreetpublichouse',
@@ -28,7 +28,7 @@ const cola = fbBatchBuilder([
   'TinRoofColumbia',
 ]);
 
-const avl = fbBatchBuilder([
+const avl = fbBatch([
   'AVLMusicHall',
   'TheOrangePeelAsheville',
   'greyeagleasheville',
