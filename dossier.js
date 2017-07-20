@@ -34,7 +34,6 @@ const avl = fbBatch([
   'greyeagleasheville',
   'AshevilleCivicCenter',
   'HighlandBrewingCompany',
-  'bhramaribrewhouse',
   'NewMtnAVL',
   'OneStopAsheville',
   // 'isisasheville',
@@ -46,11 +45,14 @@ const dossier = {
     title: 'gvltonight',
     url: 'gvltonight.com',
     api: 'api.gvltonight.com',
-    data: [
-      _facebookData(gvl, 'GVL'),
-      _smileysData(),
-      _radioroomData(),
-    ],
+    market: 'GVL',
+    data: () => {
+      return [
+        _facebookData(gvl, 'GVL'),
+        _smileysData(),
+        _radioroomData(),
+      ];
+    },
   },
 
   colatonight: {
@@ -58,9 +60,12 @@ const dossier = {
     title: 'colatonight',
     url: 'colatonight.com',
     api: 'api.colatonight.com',
-    data: [
-      _facebookData(cola, 'COLA'),
-    ],
+    market: 'COLA',
+    data: () => {
+      return [
+        _facebookData(cola, 'COLA'),
+      ];
+    },
   },
 
   avltonight: {
@@ -68,9 +73,12 @@ const dossier = {
     title: 'avltonight',
     url: 'avltonight.com',
     api: 'api.avltonight.com',
-    data: [
-      _facebookData(avl, 'AVL'),
-    ],
+    market: 'AVL',
+    data: () => {
+      return [
+        _facebookData(avl, 'AVL'),
+      ];
+    },
   },
 };
 
