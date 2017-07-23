@@ -35,5 +35,7 @@ module.exports = (file, data) => {
             console.error(err);
           });
       });
-  }).catch(err => console.log(err));
+  })
+  .then(() => console.log(`${moment().format()} : All Okay`))
+  .catch(err => console.log(err));
 };
