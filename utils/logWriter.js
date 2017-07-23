@@ -29,13 +29,12 @@ module.exports = (file, data) => {
         }
         fs.writeJson(file, newobj, { spaces: 2 })
           .then(() => {
-            console.log(objkeys.length);
+            console.log(`${moment().format()} : All Okay`)
           })
           .catch(err => {
             console.error(err);
           });
       });
   })
-  .then(() => console.log(`${moment().format()} : All Okay`))
   .catch(err => console.log(err));
 };
