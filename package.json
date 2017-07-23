@@ -13,8 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "fb": "^2.0.0",
+    "fs-extra": "^4.0.0",
     "json-schema-traverse": "^0.3.1",
-    "jsonfile-updater": "^2.1.0",
     "moment": "^2.18.1",
     "mongodb": "^2.2.29",
     "request": "^2.81.0"
