@@ -16,6 +16,7 @@ const gvl = fbBatch([
   'iongreenville',
   'villivemusic',
   'gmapunx',
+  'wpbrradioroom',
 ]);
 
 const cola = fbBatch([
@@ -50,7 +51,7 @@ const dossier = {
       return [
         _facebookData(gvl, 'GVL'),
         _smileysData(),
-        _radioroomData(),
+        // _radioroomData(),
       ];
     },
   },
