@@ -36,7 +36,8 @@ const avl = fbBatch([
   'AshevilleCivicCenter',
   'HighlandBrewingCompany',
   'NewMtnAVL',
-  'OneStopAsheville',
+  'OneStopAVL',
+  //'OneStopAsheville',
   // 'isisasheville',
 ]);
 
