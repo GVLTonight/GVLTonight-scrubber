@@ -37,8 +37,7 @@ const avl = fbBatch([
   'HighlandBrewingCompany',
   'NewMtnAVL',
   'OneStopAVL',
-  //'OneStopAsheville',
-  // 'isisasheville',
+  // 'OneStopAsheville', // this line broke everything. Keep here as reminder.
 ]);
 
 const dossier = {

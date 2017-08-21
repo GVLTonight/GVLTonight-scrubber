@@ -16,25 +16,30 @@ function writeFiles(file) {
   });
 }
 
-module.exports = (file, data) => {
-  writeFiles(file)
-  .then(() => {
-    fs.readJson(file)
-      .then(x => {
-        const newobj = x;
-        newobj[moment().format()] = data;
-        const objkeys = Object.keys(newobj);
-        if (objkeys.length >= 10) {
-          delete newobj[objkeys[0]];
-        }
-        fs.writeJson(file, newobj, { spaces: 2 })
-          .then(() => {
-            console.log(`${moment().format()} : All Okay`)
-          })
-          .catch(err => {
-            console.error(err);
-          });
-      });
-  })
-  .catch(err => console.log(err));
+module.exports = (file, data, error) => {
+  return new Promise(resolve => {
+    writeFiles(file)
+    .then(() => {
+      fs.readJson(file)
+        .then(x => {
+          const newobj = x;
+          newobj[moment().format()] = data;
+          const objkeys = Object.keys(newobj);
+          if (objkeys.length >= 10) {
+            delete newobj[objkeys[0]];
+          }
+          resolve(fs.writeJson(file, newobj, { spaces: 2 })
+            .then(() => {
+              if (error) {
+                return console.log(`${moment().format()} : ERROR : FULL STOP`);
+              }
+              return console.log(`${moment().format()} : All Okay`);
+            })
+            .catch(err => {
+              return console.error(err);
+            }));
+        });
+    })
+    .catch(err => console.log(err));
+  });
 };
