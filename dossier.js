@@ -18,6 +18,7 @@ const gvl = fbBatch([
   'gmapunx',
   'wpbrradioroom',
   'thespinningjennygreer',
+  'tipsymusicpub',
 ]);
 
 const cola = fbBatch([
