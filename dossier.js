@@ -1,9 +1,9 @@
 // GVL SPECIFIC
 const _smileysEvents = require('./lib/smileys_events.js');
-const _radioroomEvents = require('./lib/radioroom_events.js');
 const _fbEvents = require('./lib/fb_events.js');
 const _smileysData = () => _smileysEvents.getSmileysData();
-const _radioroomData = () => _radioroomEvents();
+// const _radioroomEvents = require('./lib/radioroom_events.js');
+// const _radioroomData = () => _radioroomEvents();
 
 // GLOBAL FACEBOOK BUILDER
 const fbBatch = require('./utils/fbBatchBuilder');
@@ -49,13 +49,11 @@ const dossier = {
     url: 'gvltonight.com',
     api: 'api.gvltonight.com',
     market: 'GVL',
-    data: () => {
-      return [
-        _facebookData(gvl, 'GVL'),
-        _smileysData(),
-        // _radioroomData(),
-      ];
-    },
+    data: () => [
+      _facebookData(gvl, 'GVL'),
+      _smileysData(),
+      // _radioroomData(),
+    ],
   },
 
   colatonight: {
@@ -64,11 +62,9 @@ const dossier = {
     url: 'colatonight.com',
     api: 'api.colatonight.com',
     market: 'COLA',
-    data: () => {
-      return [
-        _facebookData(cola, 'COLA'),
-      ];
-    },
+    data: () => [
+      _facebookData(cola, 'COLA'),
+    ],
   },
 
   avltonight: {
@@ -77,11 +73,9 @@ const dossier = {
     url: 'avltonight.com',
     api: 'api.avltonight.com',
     market: 'AVL',
-    data: () => {
-      return [
-        _facebookData(avl, 'AVL'),
-      ];
-    },
+    data: () => [
+      _facebookData(avl, 'AVL'),
+    ],
   },
 };
 
