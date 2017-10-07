@@ -3,4 +3,5 @@ module.exports = {
   GVL: {},
   AVL: {},
   COLA: {},
+  CLT: {},
 };

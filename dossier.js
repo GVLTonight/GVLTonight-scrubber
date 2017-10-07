@@ -43,7 +43,9 @@ const avl = fbBatch([
 ]);
 
 const clt = fbBatch([
-  // Nothing to see here...
+  'THEMILESTONECLUB',
+  'FillmoreNC',
+  'UptownAmp',
 ]);
 
 const dossier = {
