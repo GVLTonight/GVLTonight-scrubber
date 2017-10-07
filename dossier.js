@@ -42,6 +42,10 @@ const avl = fbBatch([
   // 'OneStopAsheville', // this line broke everything. Keep here as reminder.
 ]);
 
+const clt = fbBatch([
+  // Nothing to see here...
+]);
+
 const dossier = {
   gvltonight: {
     collection: 'eventstore',
@@ -75,6 +79,17 @@ const dossier = {
     market: 'AVL',
     data: () => [
       _facebookData(avl, 'AVL'),
+    ],
+  },
+
+  queencitytonight: {
+    collection: 'queencitytonight',
+    title: 'queencitytonight',
+    url: 'queencitytonight.com',
+    api: 'api.queencitytonight.com',
+    market: 'CLT',
+    data: () => [
+      _facebookData(clt, 'CLT'),
     ],
   },
 };

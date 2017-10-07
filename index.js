@@ -23,6 +23,11 @@ async function entry() {
       Dossier.avltonight.collection,
       Dossier.avltonight.market,
     ),
+    scrubber(
+      Dossier.queencitytonight.data(),
+      Dossier.queencitytonight.collection,
+      Dossier.queencitytonight.market,
+    ),
   ]);
 }
 
