@@ -18,7 +18,6 @@ const gvl = fbBatch([
   'gmapunx',
   'wpbrradioroom',
   'thespinningjennygreer',
-  'tipsymusicpub',
 ]);
 
 const cola = fbBatch([
@@ -39,6 +38,8 @@ const avl = fbBatch([
   'HighlandBrewingCompany',
   'NewMtnAVL',
   'OneStopAVL',
+  'ambrosewestavl',
+  'ashevilleodditorium',
   // 'OneStopAsheville', // this line broke everything. Keep here as reminder.
 ]);
 
